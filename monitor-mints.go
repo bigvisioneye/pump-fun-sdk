@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	pump "github.com/1fge/pump-fun-sniper-bot/pump"
+	pump "github.com/bigvisioneye/pump-fun-sdk/pump"
 	bin "github.com/gagliardetto/binary"
 	"github.com/gagliardetto/solana-go"
 	"github.com/gagliardetto/solana-go/programs/system"

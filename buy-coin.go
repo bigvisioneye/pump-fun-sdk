@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/1fge/pump-fun-sniper-bot/pump"
+	"github.com/bigvisioneye/pump-fun-sdk/pump"
 	"github.com/gagliardetto/solana-go"
 	associatedtokenaccount "github.com/gagliardetto/solana-go/programs/associated-token-account"
 	cb "github.com/gagliardetto/solana-go/programs/compute-budget"

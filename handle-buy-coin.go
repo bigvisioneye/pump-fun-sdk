@@ -10,7 +10,7 @@ import (
 	"github.com/gagliardetto/solana-go/programs/token"
 	"github.com/gagliardetto/solana-go/rpc"
 
-	pump "github.com/1fge/pump-fun-sniper-bot/pump"
+	pump "github.com/bigvisioneye/pump-fun-sdk/pump"
 )
 
 type instPair struct {

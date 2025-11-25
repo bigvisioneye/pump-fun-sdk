@@ -51,7 +51,7 @@ if err := bot.beginJito(); err != nil {
 
 1. **Clone the Repository**:
     ```sh
-    git clone https://github.com/1fge/pump-fun-sniper-bot.git
+    git clone https://github.com/bigvisioneye/pump-fun-sdk.git
     cd pump-fun-sniper-bot
     ```
 

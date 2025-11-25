@@ -5,8 +5,8 @@ import (
 	"crypto/tls"
 	"fmt"
 
-	"github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/pkg"
-	"github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/proto"
+	"github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/pkg"
+	"github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

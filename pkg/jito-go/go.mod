@@ -1,4 +1,4 @@
-module github.com/1fge/pump-fun-sniper-bot/pkg/jito-go
+module github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go
 
 go 1.22.0
 

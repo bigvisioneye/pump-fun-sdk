@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/proto"
+	"github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/proto"
 	"github.com/gagliardetto/solana-go"
 	"github.com/mr-tron/base58"
 	"google.golang.org/grpc"

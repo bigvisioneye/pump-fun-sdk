@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	jito_go "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go"
-	"github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/clients/searcher_client"
-	util "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/pkg"
+	jito_go "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go"
+	"github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/clients/searcher_client"
+	util "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/pkg"
 	"github.com/gagliardetto/solana-go"
 	"github.com/gagliardetto/solana-go/rpc"
 )

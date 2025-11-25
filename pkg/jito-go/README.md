@@ -1,13 +1,13 @@
 # Jito Go SDK
-[![GoDoc](https://pkg.go.dev/badge/github.com/1fge/pump-fun-sniper-bot/pkg/jito-go?status.svg)](https://pkg.go.dev/github.com/1fge/pump-fun-sniper-bot/pkg/jito-go?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/1fge/pump-fun-sniper-bot/pkg/jito-go)](https://goreportcard.com/report/github.com/1fge/pump-fun-sniper-bot/pkg/jito-go)
+[![GoDoc](https://pkg.go.dev/badge/github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go?status.svg)](https://pkg.go.dev/github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go)](https://goreportcard.com/report/github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go)
 [![License](https://img.shields.io/badge/license-Apache_2.0-crimson)](https://opensource.org/license/apache-2-0)
 
 This library contains tooling to interact with **[Jito Labs](https://www.jito.wtf/)** MEV software. ⚠️ Work in progress. ⚠️
 
 We currently use [gagliardetto/solana-go](https://github.com/gagliardetto/solana-go) to interact with Solana.  PRs and contributions are welcome.
 
-![jitolabs](https://github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/assets/108926252/5751416c-333b-412e-8f3f-f26b2839be98)
+![jitolabs](https://github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/assets/108926252/5751416c-333b-412e-8f3f-f26b2839be98)
 
 ## ❇️ Contents
 - [Features](#-features)
@@ -70,7 +70,7 @@ We currently use [gagliardetto/solana-go](https://github.com/gagliardetto/solana
 
 Go 1.22.0 or higher.
 ```shell
-go get github.com/1fge/pump-fun-sniper-bot/pkg/jito-go@latest
+go get github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go@latest
 ```
 
 If you want to run tests:
@@ -96,8 +96,8 @@ import (
   "github.com/gagliardetto/solana-go/programs/system"
   "github.com/gagliardetto/solana-go/rpc"
   "github.com/joho/godotenv"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/clients/searcher_client"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/clients/searcher_client"
   "log"
   "os"
   "time"
@@ -206,8 +206,8 @@ import (
   "github.com/gagliardetto/solana-go"
   "github.com/gagliardetto/solana-go/rpc"
   "github.com/joho/godotenv"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/clients/searcher_client"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/clients/searcher_client"
   "log"
   "os"
 )
@@ -273,8 +273,8 @@ package main
 import (
     "github.com/gagliardetto/solana-go"
     "github.com/gagliardetto/solana-go/rpc"
-    "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go"
-    "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/clients/searcher_client"
+    "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go"
+    "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/clients/searcher_client"
     "log"
     "os"
 )
@@ -328,7 +328,7 @@ package main
 
 import (
   "context"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/clients/geyser_client"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/clients/geyser_client"
   "log"
 )
 
@@ -365,8 +365,8 @@ import (
   "github.com/gagliardetto/solana-go/programs/system"
   "github.com/gagliardetto/solana-go/rpc"
   "github.com/joho/godotenv"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go"
-  "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/clients/searcher_client"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go"
+  "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/clients/searcher_client"
   "log"
   "os"
   "time"
@@ -497,4 +497,4 @@ If my work has been useful in building your for-profit services/infra/bots/etc, 
 
 ## 📃 License
 
-[Apache-2.0 License](https://github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/blob/main/LICENSE).
+[Apache-2.0 License](https://github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/blob/main/LICENSE).

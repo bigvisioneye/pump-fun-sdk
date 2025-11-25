@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	jito_go "github.com/1fge/pump-fun-sniper-bot/pkg/jito-go"
-	"github.com/1fge/pump-fun-sniper-bot/pkg/jito-go/proto"
+	jito_go "github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go"
+	"github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go/proto"
 	"github.com/gagliardetto/solana-go"
 	"github.com/joho/godotenv"
 	"github.com/stretchr/testify/assert"
