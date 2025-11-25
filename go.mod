@@ -9,7 +9,6 @@ replace github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go => ./pkg/jito-go
 replace github.com/bigvisioneye/pump-fun-sdk/pump => ./pump
 
 require (
-	github.com/bigvisioneye/pump-fun-sdk v0.0.0-20240801234543-58d048de3412
 	github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go v0.0.0-20240801234543-58d048de3412
 	github.com/davecgh/go-spew v1.1.1
 	github.com/gagliardetto/binary v0.8.0

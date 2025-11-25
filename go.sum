@@ -1,9 +1,5 @@
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
-github.com/bigvisioneye/pump-fun-sdk v0.0.0-20240801234543-58d048de3412 h1:pRz9L/26xyPgNnxR9SYFTaJBwHQiKxwlxeGIS01iTms=
-github.com/bigvisioneye/pump-fun-sdk v0.0.0-20240801234543-58d048de3412/go.mod h1:fra0GmoINIJqZoIGs8vrdpSQ33sG93tx6EydUDG0E1M=
-github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go v0.0.0-20240801234543-58d048de3412 h1:/hadybu8Poku7Ir6sGRuhF5DYU3bnfX/spBGMyGmP7k=
-github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go v0.0.0-20240801234543-58d048de3412/go.mod h1:XlcPq0XPwJyJ8wiZ7nreS7EnPLnZ6RxGlfDzbzdpGLc=
 github.com/AlekSi/pointer v1.1.0 h1:SSDMPcXD9jSl8FPy9cRzoRaMJtm9g9ggGTxecRUbQoI=
 github.com/AlekSi/pointer v1.1.0/go.mod h1:y7BvfRI3wXPWKXEBhU71nbnIEEZX0QTSB2Bj48UJIZE=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
