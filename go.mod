@@ -1,15 +1,15 @@
-module github.com/1fge/pump-fun-sniper-bot
+module github.com/bigvisioneye/pump-fun-sdk
 
 go 1.22.0
 
 toolchain go1.22.5
 
-replace github.com/1fge/pump-fun-sniper-bot/pkg/jito-go => ./pkg/jito-go
+replace github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go => ./pkg/jito-go
 
-replace github.com/1fge/pump-fun-sniper-bot/pump => ./pump
+replace github.com/bigvisioneye/pump-fun-sdk/pump => ./pump
 
 require (
-	github.com/1fge/pump-fun-sniper-bot/pkg/jito-go v0.0.0-00010101000000-000000000000
+	github.com/bigvisioneye/pump-fun-sdk/pkg/jito-go v0.0.0-00010101000000-000000000000
 	github.com/davecgh/go-spew v1.1.1
 	github.com/gagliardetto/binary v0.8.0
 	github.com/gagliardetto/gofuzz v1.2.2
