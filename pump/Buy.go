@@ -44,7 +44,7 @@ type Buy struct {
 // NewBuyInstructionBuilder creates a new `Buy` instruction builder.
 func NewBuyInstructionBuilder() *Buy {
 	nd := &Buy{
-		AccountMetaSlice: make(ag_solanago.AccountMetaSlice, 12),
+		AccountMetaSlice: make(ag_solanago.AccountMetaSlice, 16),
 	}
 	return nd
 }
@@ -161,13 +161,13 @@ func (inst *Buy) GetTokenProgramAccount() *ag_solanago.AccountMeta {
 }
 
 // SetRentAccount sets the "rent" account.
-func (inst *Buy) SetRentAccount(rent ag_solanago.PublicKey) *Buy {
-	inst.AccountMetaSlice[9] = ag_solanago.Meta(rent)
+func (inst *Buy) SetCreatorVaultPDAAccount(creatorVaultPDA ag_solanago.PublicKey) *Buy {
+	inst.AccountMetaSlice[9] = ag_solanago.Meta(creatorVaultPDA).WRITE()
 	return inst
 }
 
-// GetRentAccount gets the "rent" account.
-func (inst *Buy) GetRentAccount() *ag_solanago.AccountMeta {
+// GetCreatorVaultPDAAccount gets the "creatorVaultPDA" account.
+func (inst *Buy) GetCreatorVaultPDAAccount() *ag_solanago.AccountMeta {
 	return inst.AccountMetaSlice.Get(9)
 }
 
@@ -185,6 +185,26 @@ func (inst *Buy) GetEventAuthorityAccount() *ag_solanago.AccountMeta {
 // SetProgramAccount sets the "program" account.
 func (inst *Buy) SetProgramAccount(program ag_solanago.PublicKey) *Buy {
 	inst.AccountMetaSlice[11] = ag_solanago.Meta(program)
+	return inst
+}
+
+func (inst *Buy) SetGlobalVolumePDAAccount(globalVolumePDA ag_solanago.PublicKey) *Buy {
+	inst.AccountMetaSlice[12] = ag_solanago.Meta(globalVolumePDA)
+	return inst
+}
+
+func (inst *Buy) SetUserVolumePDAAccount(userVolumePDA ag_solanago.PublicKey) *Buy {
+	inst.AccountMetaSlice[13] = ag_solanago.Meta(userVolumePDA).WRITE()
+	return inst
+}
+
+func (inst *Buy) SetFeeConfigAccount(feeConfig ag_solanago.PublicKey) *Buy {
+	inst.AccountMetaSlice[14] = ag_solanago.Meta(feeConfig)
+	return inst
+}
+
+func (inst *Buy) SetFeeProgramAccount(feeProgram ag_solanago.PublicKey) *Buy {
+	inst.AccountMetaSlice[15] = ag_solanago.Meta(feeProgram)
 	return inst
 }
 
@@ -278,7 +298,7 @@ func (inst *Buy) EncodeToTree(parent ag_treeout.Branches) {
 					})
 
 					// Accounts of the instruction:
-					instructionBranch.Child("Accounts[len=12]").ParentFunc(func(accountsBranch ag_treeout.Branches) {
+					instructionBranch.Child("Accounts[len=16]").ParentFunc(func(accountsBranch ag_treeout.Branches) {
 						accountsBranch.Child(ag_format.Meta("                global", inst.AccountMetaSlice.Get(0)))
 						accountsBranch.Child(ag_format.Meta("          feeRecipient", inst.AccountMetaSlice.Get(1)))
 						accountsBranch.Child(ag_format.Meta("                  mint", inst.AccountMetaSlice.Get(2)))
@@ -291,6 +311,10 @@ func (inst *Buy) EncodeToTree(parent ag_treeout.Branches) {
 						accountsBranch.Child(ag_format.Meta("                  rent", inst.AccountMetaSlice.Get(9)))
 						accountsBranch.Child(ag_format.Meta("        eventAuthority", inst.AccountMetaSlice.Get(10)))
 						accountsBranch.Child(ag_format.Meta("               program", inst.AccountMetaSlice.Get(11)))
+						accountsBranch.Child(ag_format.Meta("globalVolumeAccumulator", inst.AccountMetaSlice.Get(12)))
+						accountsBranch.Child(ag_format.Meta("  userVolumeAccumulator", inst.AccountMetaSlice.Get(13)))
+						accountsBranch.Child(ag_format.Meta("              feeConfig", inst.AccountMetaSlice.Get(14)))
+						accountsBranch.Child(ag_format.Meta("         	  feeProgram", inst.AccountMetaSlice.Get(15)))
 					})
 				})
 		})
@@ -338,9 +362,14 @@ func NewBuyInstruction(
 	user ag_solanago.PublicKey,
 	systemProgram ag_solanago.PublicKey,
 	tokenProgram ag_solanago.PublicKey,
-	rent ag_solanago.PublicKey,
+	creatorVaultPDA ag_solanago.PublicKey,
 	eventAuthority ag_solanago.PublicKey,
-	program ag_solanago.PublicKey) *Buy {
+	program ag_solanago.PublicKey,
+	globalVolumePDA ag_solanago.PublicKey,
+	userVolumePDA ag_solanago.PublicKey,
+	feeConfig ag_solanago.PublicKey,
+	feeProgram ag_solanago.PublicKey,
+) *Buy {
 	return NewBuyInstructionBuilder().
 		SetAmount(amount).
 		SetMaxSolCost(maxSolCost).
@@ -353,7 +382,11 @@ func NewBuyInstruction(
 		SetUserAccount(user).
 		SetSystemProgramAccount(systemProgram).
 		SetTokenProgramAccount(tokenProgram).
-		SetRentAccount(rent).
+		SetCreatorVaultPDAAccount(creatorVaultPDA).
 		SetEventAuthorityAccount(eventAuthority).
-		SetProgramAccount(program)
+		SetProgramAccount(program).
+		SetGlobalVolumePDAAccount(globalVolumePDA).
+		SetUserVolumePDAAccount(userVolumePDA).
+		SetFeeConfigAccount(feeConfig).
+		SetFeeProgramAccount(feeProgram)
 }
